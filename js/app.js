@@ -46,9 +46,6 @@ function play_sound(sound) {
   $('#audio').audivid("play");
 }
 
-$(function() {
-  console.log("attaching fastclick");
-    FastClick.attach(document.body);
-});
+
 
 init_ui();
