@@ -1,8 +1,8 @@
 function init_ui() {
   var format;
   var formats = {
-    mp3: { mime: "audio/mpeg",  ext: "mp3"},
-    wav: { mime: "audio/x-wav", ext: "wav"}
+    mp3: { mime: "audio/mpeg",  ext: "mp3"}
+  //  wav: { mime: "audio/x-wav", ext: "wav"}
   };
 
   for( var format in formats ) {
@@ -13,7 +13,7 @@ function init_ui() {
     if( format.canPlayTag ) {
       $("#buttons a").each(
         function() {
-          $(this).click( function() {
+          $(this).bind('click', function() {
             var p = $(this).attr( "data-soundfile");
             window.history.pushState( p, p, "#" + p );
             play_sound( p + "." + format.ext );
@@ -33,8 +33,8 @@ function play_sound(sound) {
   if( ! sound )
     return;
 
-  if( $('#audio').audivid("isplaying"))
-    $('#audio').audivid("pause");
+  //if( $('#audio').audivid("isplaying"))
+  //  $('#audio').audivid("pause");
 
   $("#audio").replaceWith(
     $('<audio/>')

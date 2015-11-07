@@ -159,8 +159,9 @@ button {  width: auto; overflow: visible; }
 
 #pic {
   width: 180px;
-  background: transparent url('../images/joel-bauer.jpg') no-repeat center right;
-  height: 100px;
+  background: transparent url('../images/adriano.jpg');
+  background-size: cover;
+  height: 200px;
   margin: 0 30px 40px 30px;
   float: left;
 }
@@ -223,4 +224,3 @@ button {  width: auto; overflow: visible; }
 #sharelinks .twitter a:hover {background-position: 0 -62px;}
 #sharelinks .twitter a:active {background-position: 0 0;}
 .buttontext {font-size: 12px; margin-bottom: 20px; text-align: center;}
-
