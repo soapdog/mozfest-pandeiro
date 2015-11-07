@@ -17,7 +17,7 @@ function init_ui() {
             console.log("touchstart");
             var p = $(this).attr( "data-soundfile");
             window.history.pushState( p, p, "#" + p );
-            play_sound( p + "." + format.ext );
+            play_sound( p  );
           });
         }
       );
@@ -34,16 +34,22 @@ function play_sound(sound) {
   if( ! sound )
     return;
 
+    console.log("sound", sound);
+
   //if( $('#audio').audivid("isplaying"))
   //  $('#audio').audivid("pause");
 
-  $("#audio").replaceWith(
+/*  $("#audio").replaceWith(
     $('<audio/>')
       .attr({ src : "./sounds/" + sound })
       .attr({ id : "audio" })
       .attr({ style : "display: none" })
   );
   $('#audio').audivid("play");
+  */
+
+  $("#" + sound).audivid("play");
+
 }
 
 
