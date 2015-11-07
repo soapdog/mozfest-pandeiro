@@ -118,7 +118,7 @@ button {  width: auto; overflow: visible; }
 }
 
 #main {
-  width: 960px;
+  width: 100%;
   margin: 0 auto;
 }
 
