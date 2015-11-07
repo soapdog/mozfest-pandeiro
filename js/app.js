@@ -13,7 +13,7 @@ function init_ui() {
     if( format.canPlayTag ) {
       $("#buttons a").each(
         function() {
-          $(this).bind('click', function() {
+          $(this).click( function() {
             var p = $(this).attr( "data-soundfile");
             window.history.pushState( p, p, "#" + p );
             play_sound( p + "." + format.ext );
@@ -44,5 +44,10 @@ function play_sound(sound) {
   );
   $('#audio').audivid("play");
 }
+
+$(function() {
+  console.log("attaching fastclick");
+    FastClick.attach(document.body);
+});
 
 init_ui();
