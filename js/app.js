@@ -13,7 +13,7 @@ function init_ui() {
     if( format.canPlayTag ) {
       $("#buttons a").each(
         function() {
-          $(this).bind('touchstart', function() {
+          $(this).fastClick(function() {
             console.log("touchstart");
             var p = $(this).attr( "data-soundfile");
             window.history.pushState( p, p, "#" + p );
